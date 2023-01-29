@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+      Civitas
+    </title>
+    
+      <!--Bootstrap CSS-->
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      <!--Custom CSS-->
+      <link href="/static/project.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Civitas</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link " aria-current="page" href="/incubator">Projects</a>
+            <a class="nav-link" href="/community">Community</a>
+              <a class="nav-link active" style="font-style:oblique; text-decoration: underline;" id="log_in_out" href="/login">Login</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+ 
+  </body>
+  <div class="login-body">
+    <section class="vh-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6 text-black">
+    
+            <!-- <div class="px-5 ms-xl-4">
+              <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+              <span class="h1 fw-bold mb-0">Logo</span>
+            </div> -->
+    
+            <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+              <form action="//backend.minnehackteam.repl.co/login" method="post" class="p-4 p-md-5 border rounded-3 bg-light" id="login-box" style="width: 23rem;">
+
+                  <h3 class="mb-3 pb-3" style="letter-spacing: 1px;">Log in or register</h3>
+
+                  <div class="form-outline mb-4"">
+                      <label class="form-label" for="uname">Username</label>
+                      <input type="text" class="form-control form-control-lg" id="uname" name="uname">
+                  </div>
+                  <div class="form-outline mb-4"">
+                      <label class="form-label" for="email">Email(only for new users)</label>
+                      <input type="email" class="form-control form-control-lg" id="email" name="email">
+                  </div>
+                  <div class="form-outline mb-3">
+                      <label class="form-label" for="pwd">Password</label>
+                      <input type="password" class="form-control form-control-lg" id="pwd" name="pwd">
+                  </div>
+                  <br />
+                  <div id="form-button">
+                    <input type="submit" class="form-control form-control-lg" value="Log in/Register">
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer id="sticky-footer" class="fixed-bottom flex-shrink-0 py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>&copy; 2023 Civitas | All rights reserved.</small>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}User Listings{% endblock %}
+
+{% block body %} 
+
+  <div id="user-listings-banner">
+    <div class="user-listings-text">
+      <h2>User Listings</h2>
+      <p>
+        <span id="result-count">
+          {{ listing_count }}
+        </span>
+        listings in your account.
+      </p>
+    </div>
+  </div>
+    
+
+    <div id="favorite_listing" style="border:solid black 1px;"></div>
+
+    <button id="add_listing_button" class="btn btn-outline-dark btn-rounded"><a href="/add_listing">Post new listing</a></button>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes" >
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    
+  <div class="container id="user-listing-container">
+        {% for user_listing in user_listings %}
+        <ul class="user_listings-list list-group">
+          <li class="list-group-item list-group-item-action">
+            
+            <div class="row listing-title">
+              <div class="col">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5>Apartment Name: <a href="listings/{{user_listing.listing_id}}" target="_blank">{{ user_listing.name }}</a></h5>
+                  
+                  <h5>Rating: {{ user_listing.rating }}</h5>
+                  <div class="user_buttons">
+                    <button class="favorite_button btn btn-primary" id="{{user_listing.listing_id}}"> <a href="#user-listings-banner" class="favorite-link">Set This My Favorite</a></button>
+                    <button class="delete_listing_button btn btn-danger" id="{{user_listing.listing_id}}">Delete Listing</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="row">
+              <div class="col-6">
+                <a href="listings/{{user_listing.listing_id}}" target="_blank"><img class="listing_img" src="{{ user_listing.image_url }}"></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        {% endfor %}
+    </div>  
+{% endblock %}
+
+{% block js %}
+<script src="/static/project.js"></script>
+{% endblock %}

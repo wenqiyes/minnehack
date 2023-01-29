@@ -1,4 +1,256 @@
-html, body {
-  height: 100%;
-  width: 100%;
+.hidden {
+  display: none;
 }
+
+a{
+    color:black;
+}
+
+.empty-space{
+    height: 70px;
+}
+
+/* All listings page*/
+.listing_img{
+    width: 100%;
+    height: 100%;
+}
+
+#all-listings-banner{
+    background:url("../static/images/all-listings-banner.jpg") no-repeat center;
+    height: 250px;
+    text-align: center;
+    background-size: cover;
+    filter: grayscale(0.30);
+    color: white;
+    padding-top: 75px;
+}
+
+.all-listings-text{
+    background: rgba(150, 75, 0,0.5);
+    height: 90px;
+    padding-top: 10px;
+}
+
+.all-listings{
+    margin-top: 20px;
+    
+}
+
+.list-group-item{
+    margin:10px;
+}
+
+.listing-title{
+    margin: 5px 0;
+}
+
+.apartment-name{
+    color: black;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.list-group-item:hover{
+    background-color:  ivory !important; 
+    border: solid 2px black;
+}
+
+.page-button{
+    margin: 10px 0;
+}
+
+.all-listings-buttons:hover{
+    background-color: rgba(150, 75, 0,0.5);
+    font-weight: bolder;
+}
+
+/*User Listings Page*/
+#user-listings-banner{
+    background:url("../static/images/user-listings-banner.jpg") no-repeat center;
+    height: 250px;
+    text-align: center;
+    background-size: cover;
+    filter: grayscale(0.30);
+    color: white;
+    padding-top: 75px;
+}
+
+.user-listings-text{
+    background: rgba(150, 75, 0, 0.5);
+    height: 90px;
+    padding-top: 10px;
+}
+
+.favorite-link {
+    text-decoration: none;
+    color: white;
+}
+
+.favorite-link:hover {
+    color: yellow;
+    font-weight: bolder;
+}
+
+
+
+#favorite_listing{
+    background: rgba(48, 48, 20);
+    color: rgba(255,265,0,0.8);
+    font-weight: 800;
+    font-size: x-large;
+    font-style: oblique;
+    text-align: center;
+    margin:10px;
+
+}
+
+
+#add_listing_button{
+    margin:10px 15px;
+    background-color: rgba(150, 75, 0,0.5);
+    font-weight: bolder;
+}
+
+#add_listing_button:hover {
+    border: solid 2px black;
+}
+
+#add_listing_button a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Add Listing Page*/
+#add-listing-form{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Listing detail page*/
+.listing_detail_img{
+    width: 100%;
+    height: 400px;
+}
+
+.listing-detail-container{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border:solid 2px rgba(150, 75, 0, 0.5);
+}
+
+.listing-detail-container .col-sm-6{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#listing-details-banner{
+    background:url("../static/images/listing-details-banner.jpg") no-repeat center;
+    height: 250px;
+    text-align: center;
+    background-size: cover;
+    filter: grayscale(0.30);
+    color: white;
+    padding-top: 75px;
+}
+
+.listing-details-banner-text{
+    background: rgba(150, 75, 0, 0.5);
+    height: 90px;
+    padding-top: 10px;
+}
+
+.listing-details-text{
+    text-align: center;
+    padding: 100px 0 50px 0px;
+}
+
+.service-container{
+    padding-top: 15px;
+    margin-top: 10px;
+    
+}
+
+hr{
+    margin-top:40px;
+    border-top:solid 2px black;
+}
+
+.all-services-container{
+    background-color: rgb(81, 79, 79,0.5);
+}
+
+.service-title{
+    margin: 1em 0 0.5em 0;
+	font-weight: normal;
+	position: relative;
+	text-shadow: 0 -1px rgba(0,0,0,0.6);
+	font-size: 28px;
+	line-height: 40px;
+    width:33%;
+    text-align: center;
+    padding-bottom: 10px;
+	background: rgba(150, 75, 0, 0.5);
+	border: 1px solid rgba(150, 75, 0, 0.5);
+	padding: 5px 15px;
+	color: white;
+	border-radius: 0 10px 0 10px;
+	box-shadow: inset 0 0 5px rgba(53,86,129, 0.5);
+	font-family: 'Muli', sans-serif;
+}
+
+@media screen and (max-width:767px){
+   
+
+    .service-title{
+        width: 36%;
+    }
+}
+
+/* Homepage */
+#homepage-body{
+    height: 100%;
+    background: url("../static/images/background.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#home-content{
+    padding:300px 0;
+    text-align: center;
+    display: block;   
+}
+
+.home-text{
+    color: white;
+    margin: auto;
+    padding-top: 75px;
+    /* background-color: grey ; */
+    background: rgba( 128, 128, 128, 0.75 );
+    /* opacity: 0.75; */
+    width: 55%;
+    height: 250px;
+}
+
+
+.form-control{
+    margin: auto;
+    width:75%;
+}
+
+@media screen and (max-width:850px){
+    .home-text{
+        height: 300px;
+    }
+}
+
+/*Login page*/
+#form-button{
+    padding-left: 65px;
+}
+
+#login-box{
+    margin: auto;
+    margin-top: 50px;
+}
+
