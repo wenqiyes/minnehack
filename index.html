@@ -8,7 +8,7 @@
     </title>
     
       <!--Bootstrap CSS-->
-      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
       <!--Custom CSS-->
       <link href="/style.css" rel="stylesheet">
@@ -25,9 +25,15 @@
           <div class="navbar-nav">
             <a class="nav-link " aria-current="page" href="/projects.html">Projects</a>
             <a class="nav-link" href="/community.html">Community</a>
-              <a class="nav-link active" style="font-style:oblique; text-decoration: underline;" id="log_in" href="/login.html">Login</a>
-            <a class="nav-link active hidden" style="font-style:oblique; text-decoration: underline;" id="log_out" href="/logout.html">Logout</a>
-            <script></script>
+              <a class="nav-link active loginout" style="font-style:oblique; text-decoration: underline;" id="log_in" href="/login.html">Login</a>
+            <a class="nav-link active hidden loginout" style="font-style:oblique; text-decoration: underline;" id="log_out" href="/logout.html">Logout</a>
+            <script>function getCookie(cname) {let name = cname + "=";let decodedCookie = decodeURIComponent(document.cookie);let ca = decodedCookie.split(';');for(let i = 0; i <ca.length; i++) {let c = ca[i];while (c.charAt(0) == ' ') {c = c.substring(1);}if (c.indexOf(name) == 0) {return c.substring(name.length, c.length);}return "";}
+            fetch("https://backend.minnehackteam.repl.co/verifyToken?token="+getCookie("token")).then(x => x.text()).then(function(y){ if (y=="true"){
+              let classs = document.getElementsByClassName("loginout");
+              for(let i = 0; i<classs.length; i++) {
+                classs[i].classList.toggle("hidden");
+              }
+            }});</script>
           </div>
         </div>
       </div>
@@ -35,22 +41,23 @@
     <main>
       <noscript><p1>We noticed that you disabled javascript on your browser.</p1><h1>We're sorry, but we rely on javascript for our site to function.</h1><p1>Please enable javascript to use Civitas.</p1></noscript>
       <h1>Who we are</h1>
-      <p1>Have you ever wanted to be an active part of your community, but you didn't know how to get involved?</p1> <br>
-      <p2>Civitas is a platform that can help you to actively participate in their community.</p2> <br>
+      <p1>Have you ever wanted to be an active part of your community, but didn't know how to get involved?</p1> <br>
+      <p2>Civitas is a platform that can allows you to actively participate in your community.</p2> <br>
      <img src="hero.svg" align="right" 
        width="300" height="300">
       <br>
       <h1>Features</h1>
       <ul>
-        <li>Post community project ideas and intiatives</li>
-        <li>Select and vote for other projects posted</li>
+        <li>Create community project ideas and intiatives</li>
+        <li>Vote on and discuss other projects posted</li>
         <li>Voice your opinion about current political and social issues</li>
-        <li>Interact with other members</li>
+        <li>Interact with other members in your own community</li>
     </ul>
     </main>
     
  
   </body>
+  
   <div class="empty-space"></div>
   <footer id="sticky-footer" class="fixed-bottom flex-shrink-0 py-4 bg-dark text-white-50">
     <div class="container text-center">
@@ -58,5 +65,5 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
+  
 </html>

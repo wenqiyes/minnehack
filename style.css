@@ -253,4 +253,19 @@ hr{
     margin: auto;
     margin-top: 50px;
 }
+/* Projects */
+#searchbar {
+  width: 85%;
+  border-radius: 5px;
+  border-width: 2px solid black;
+}
 
+#searchbtn {
+  border-radius: 5px;
+  border-width: 2px solid black;
+}
+
+#searchfrm {
+  margin-left: 1%;
+  margin-top: 1%;
+}
