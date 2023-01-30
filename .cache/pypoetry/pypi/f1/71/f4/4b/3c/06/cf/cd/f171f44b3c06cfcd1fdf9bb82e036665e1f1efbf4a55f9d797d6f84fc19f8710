@@ -1,0 +1,1 @@
+9999999999{"name": "cryptocode", "version": "0.1", "summary": "Python library used to encrypt and decrypt strings in the simplest possible way.", "platform": "", "requires_dist": ["pycryptodomex"], "requires_python": "", "files": [], "_cache_version": "1.0.0"}
